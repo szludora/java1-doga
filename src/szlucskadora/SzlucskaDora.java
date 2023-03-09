@@ -8,7 +8,9 @@ public class SzlucskaDora {
     // Szlucska Dóra
     
     public static void main(String[] args) {
-    tombLetrehozas(4);
+    int[] lista = tombLetrehozas(4);
+    System.out.println(vanbenne13(lista));
+    osszesOsztoja(lista);
     }
     
     
@@ -44,8 +46,29 @@ public class SzlucskaDora {
         return beker;
     }
     
-    public static void osszesOsztoja(){
+    public static void osszesOsztoja(int [] lista){
+        int index = bekerszam();
+        int abszolut = Math.abs(lista[index]);
+        ArrayList osztoi = new ArrayList();
         
-    }
-    
-}
+        int i = 2;
+        while (i < abszolut) {
+            if(abszolut%i == 0){
+               osztoi.add(i);
+            }
+        i++;}
+        
+        if(osztoi.size < 1) {
+            System.out.println("Prím szám");
+        }
+        else {
+            int x = 0;
+            while (x < osztoi.size - 1) {
+                System.out.print(osztoi.get(x) + ", ");
+            }
+            System.out.print(osztoi.get(x));
+        x++;}
+        }
+ }
+        
+        
