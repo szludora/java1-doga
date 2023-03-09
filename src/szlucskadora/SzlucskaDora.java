@@ -50,8 +50,6 @@ public class SzlucskaDora {
         int abszolut = Math.abs(lista[index]);
         ArrayList osztoi = new ArrayList();
         
-        
-        
         int i = 2;
         while (i < abszolut) {
             if(abszolut%i == 0){
@@ -59,19 +57,18 @@ public class SzlucskaDora {
             }
         i++;}
         
-        int listahossza = osztoi.length;
-        
-        if(listahossza < 1) {
+        if(osztoi.size() < 1) {
             System.out.println("Prím szám");
         }
         else {
             int x = 0;
-            while (x < listahossza - 1) {
+            while (x < osztoi.size() - 1) {
                 System.out.print(osztoi.get(x) + ", ");
+            x++;
             }
-            System.out.print(osztoi.get(x));
-        x++;}
+            System.out.print(osztoi.get(x) + "\n");
         }
  }
+}
         
         
