@@ -1,14 +1,13 @@
 package szlucskadora;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 public class SzlucskaDora {
     
     // Szlucska Dóra
     
     public static void main(String[] args) {
-    
-        System.out.println(tombLetrehozas(4));
     tombLetrehozas(4);
     }
     
@@ -26,12 +25,23 @@ public class SzlucskaDora {
         return veletlenek;
     }
     
-    public static void vanbenne13(){
-        
+    public static boolean vanbenne13(int[] lista){
+        int i = 0;
+        while (i < lista.length && lista[i] != 13) {
+        i++;}
+        if(i < lista.length){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
     
-    public static void bekerszam(){
-        
+    public static int bekerszam(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Adj meg egy számot 0 és a lista hossza-1 között: ");
+        int beker = sc.nextInt();
+        return beker;
     }
     
     public static void osszesOsztoja(){
